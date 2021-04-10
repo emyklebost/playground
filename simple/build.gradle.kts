@@ -7,5 +7,5 @@ repositories {
 }
 
 dependencies {
-    implementation("ca.uhn.hapi.fhir:hapi-fhir-structures-r4:5.2.0")
+    implementation("ca.uhn.hapi.fhir:hapi-fhir-structures-r4:5.3.0")
 }
