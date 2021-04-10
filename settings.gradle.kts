@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "playground"
-include("app", "list", "utilities")
+include("simple")
