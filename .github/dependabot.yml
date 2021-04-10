@@ -1,6 +1,14 @@
 version: 2
 updates:
   - package-ecosystem: gradle
-    directory: "/simple"
+    directory: "/app"
+    schedule:
+      interval: daily
+  - package-ecosystem: gradle
+    directory: "/list"
+    schedule:
+      interval: daily
+  - package-ecosystem: gradle
+    directory: "/utilities"
     schedule:
       interval: daily
