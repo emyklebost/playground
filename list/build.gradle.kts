@@ -6,7 +6,7 @@ plugins {
     id("playground.kotlin-library-conventions")
 }
 
-val ktorVersion = "1.5.0"
+val ktorVersion = "1.5.3"
 val ktor2Version = "1.5.0"
 
 dependencies {
