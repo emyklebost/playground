@@ -11,6 +11,7 @@ plugins {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-auth:1.5.0")
     implementation("com.sksamuel.hoplite:hoplite-core:${Version.hoplite}")
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
