@@ -6,11 +6,8 @@ plugins {
     id("playground.kotlin-library-conventions")
 }
 
-object Version {
-    const val hoplite = "1.3.0"
-    const val ktor = "1.5.0"
-}
+val ktorVersion = "1.5.0"
 
 dependencies {
-    implementation("io.ktor:ktor-auth:1.5.0")
+    implementation("io.ktor:ktor-auth:${ktorVersion}")
 }
