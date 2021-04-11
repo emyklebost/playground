@@ -7,7 +7,9 @@ plugins {
 }
 
 val ktorVersion = "1.5.0"
+val ktor2Version = "1.5.0"
 
 dependencies {
-    implementation("io.ktor:ktor-auth:${ktorVersion}")
+    implementation("io.ktor:ktor-server-netty:${ktorVersion}")
+    implementation("io.ktor:ktor-metrics-micrometer:$ktor2Version")
 }
