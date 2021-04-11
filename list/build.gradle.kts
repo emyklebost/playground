@@ -12,5 +12,5 @@ object Version {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-auth:1.5.0")
+    implementation("io.ktor:ktor-auth:1.5.3")
 }
