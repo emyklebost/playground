@@ -4,6 +4,7 @@
 
 object Version {
     const val hoplite = "1.3.0"
+    const val ktor = "1.5.0"
 }
 
 plugins {
@@ -11,7 +12,7 @@ plugins {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-auth:1.5.0")
+    implementation("io.ktor:ktor-auth:${Version.ktor}")
     implementation("com.sksamuel.hoplite:hoplite-core:${Version.hoplite}")
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))

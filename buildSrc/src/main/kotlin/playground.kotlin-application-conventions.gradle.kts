@@ -3,7 +3,7 @@
  */
 
 object Version {
-    const val ktor = "1.5.2"
+    const val ktor = "1.5.0"
     const val koin = "3.0.1-beta-2"
     const val hapi = "5.2.0"
     const val token_validation = "1.3.3"
