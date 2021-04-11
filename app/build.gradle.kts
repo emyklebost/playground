@@ -7,6 +7,7 @@ plugins {
 }
 
 dependencies {
+    implementation("com.sksamuel.hoplite:hoplite-core:${Playground_kotlin_application_conventions_gradle.Version.hoplite}")
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
 }
