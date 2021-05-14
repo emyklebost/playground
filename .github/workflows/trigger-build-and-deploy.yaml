@@ -1,3 +1,5 @@
+name: trigger-build-and-deploy
+
 on:
   workflow_dispatch:
     inputs:

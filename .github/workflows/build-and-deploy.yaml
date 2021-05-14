@@ -1,6 +1,8 @@
 on:
-  repository_dispatch:
-    types: [build-and-deploy]
+  workflow_run:
+    workflows: [trigger-build-and-deploy]
+    branches: [main]
+    types: [completed]
 
 jobs:
   main:
@@ -10,4 +12,4 @@ jobs:
       - name: my-step
         run: |
           echo "Hello World!"
-          echo  "Payload: ${{ github.event.client_payload }}"
+          echo  "Context: ${{ ${{ <context> }} }}"
