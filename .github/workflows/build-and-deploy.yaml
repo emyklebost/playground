@@ -1,3 +1,5 @@
+name: build and deploy
+
 on:
   workflow_run:
     workflows: [trigger-build-and-deploy]
