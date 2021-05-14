@@ -1,8 +1,15 @@
 name: trigger-build-and-deploy
 
 on:
+  push:
+    branches: [main]
+    paths: [kafka/nais-kafka-topic.yaml]
   workflow_dispatch:
     inputs:
+      deploy-prod:
+        description: 'If the build should also be deployed to production (must be main branch.)'
+        required: false
+        default: 'false'
       app:
         description: 'App name, e.g. hops-api'
         required: true
@@ -13,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
+        if: ${{ github.ref == 'refs/heads/main' && github.event.inputs.deploy-prod == 'true'}}
         run: |
           echo "MY TRIGGER! ${{ github.event.inputs.app }}"
           echo  "Context: ${{ toJSON(github) }}"
