@@ -3,7 +3,7 @@ name: build and deploy
 on:
   workflow_run:
     workflows: [trigger-build-and-deploy]
-    branches: [main]
+    branches: [master]
     types: [completed]
 
 jobs:
