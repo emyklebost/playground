@@ -12,4 +12,5 @@ val ktor2Version = "1.5.0"
 dependencies {
     implementation("io.ktor:ktor-server-netty:${ktorVersion}")
     implementation("io.ktor:ktor-metrics-micrometer:$ktor2Version")
+    implementation("org.apache.kafka:kafka-clients:2.7.0")
 }
