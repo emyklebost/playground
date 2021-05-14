@@ -15,4 +15,4 @@ jobs:
       - name: my-step
         run: |
           echo "MY TRIGGER!"
-          echo  "Context: ${{ ${{ <context> }} }}"
+          echo  "Context: ${{ ${{ github }} }}"
