@@ -9,10 +9,10 @@ on:
 
 jobs:
   main:
-    name: "Trigger build and deploy of ${{ github.event.client_payload.app }}"
+    name: "Trigger build and deploy of ${{ github.event.inputs.app }}"
     runs-on: ubuntu-latest
     steps:
       - name: my-step
         run: |
-          echo "MY TRIGGER! ${{ github.event.client_payload.app }}"
+          echo "MY TRIGGER! ${{ github.event.inputs.app }}"
           echo  "Context: ${{ toJSON(github) }}"
