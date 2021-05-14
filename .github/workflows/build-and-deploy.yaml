@@ -1,0 +1,13 @@
+on:
+  repository_dispatch:
+    types: [build-and-deploy]
+
+jobs:
+  main:
+    name: "Build and deploy ${{ github.event.client_payload.app }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: |
+          echo "Hello World!"
+          echo  "Payload: ${{ github.event.client_payload }}"

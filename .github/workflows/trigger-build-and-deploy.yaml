@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App name, e.g. hops-api'
+        required: true
+
+jobs:
+  main:
+    name: "Trigger build and deploy of ${{ github.event.client_payload.app }}"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          event-type: build-and-deploy
+          client-payload: '{"app": "${{ github.event.inputs.app }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
