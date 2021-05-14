@@ -7,4 +7,4 @@ jobs:
       - uses: fastify/github-action-merge-dependabot@v1
         if: ${{ github.actor == 'dependabot[bot]' }}
         with:
-          github-token: ${{ secrets.github_token }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
