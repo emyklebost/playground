@@ -1,6 +1,9 @@
 name: deploy kafka topic
 
 on:
+  push:
+    branches: [master]
+    paths: [list/**]
   workflow_dispatch:
     inputs:
       deploy-prod:
