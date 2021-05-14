@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       deploy-prod:
-        description: 'If the build should also be deployed to production (must be main branch.)'
+        description: 'If the build should also be deployed to production (must be master branch.)'
         required: false
         default: 'false'
 
@@ -24,7 +24,7 @@ jobs:
         run: echo "Deploy to Dev!"
 
       - name: Deploy to Prod
-        if: ${{ github.ref == 'refs/heads/main' && github.event.inputs.deploy-prod == 'true'}}
+        if: ${{ github.ref == 'refs/heads/master' && github.event.inputs.deploy-prod == 'true'}}
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
