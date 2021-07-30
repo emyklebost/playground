@@ -7,7 +7,7 @@ plugins {
 }
 
 val ktorVersion = "1.6.1"
-val ktor2Version = "1.6.1"
+val ktor2Version = "1.6.2"
 
 dependencies {
     implementation("io.ktor:ktor-server-netty:${ktorVersion}")
