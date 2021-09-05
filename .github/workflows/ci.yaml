@@ -20,5 +20,5 @@ jobs:
           cache-from: type=gha
 
       - name: Inspect
-          run: |
-            docker images
+        run: |
+          docker images
