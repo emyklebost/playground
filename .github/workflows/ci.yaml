@@ -14,7 +14,11 @@ jobs:
 
       - uses: docker/build-push-action@v2.7.0
         with:
+          target: build1
+          cache-from: type=gha
+
+      - uses: docker/build-push-action@v2.7.0
+        with:
           build-args: project=app
           #push: true
           tags: ghcr.io/eirikmyklebost/playground/test-app:latest
-          cache-from: type=gha
