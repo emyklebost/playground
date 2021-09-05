@@ -1,0 +1,8 @@
+*
+!app
+!app2
+!build.gradle.kts
+!gradle.properties
+!settings.gradle.kts
+**/build
+**/out
