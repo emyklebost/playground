@@ -1,6 +1,4 @@
-FROM ghcr.io/navikt/hops-build AS build1
-
-FROM build1 AS build
+FROM ghcr.io/navikt/hops-build AS build
 COPY . .
 ARG project
 RUN gradle ${project}:shadowJar --no-daemon --no-build-cache
