@@ -18,7 +18,6 @@ jobs:
           #push: true
           tags: ghcr.io/eirikmyklebost/playground/test-app:latest
           cache-from: type=gha
-          load: true
 
       - name: Inspect
         run: |
